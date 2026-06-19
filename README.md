@@ -36,30 +36,32 @@ pip install dataset
 ## Chạy mô hình
 
 Chạy pipeline theo các bước dưới đây để xử lý dữ liệu, huấn luyện và đánh giá mô hình:  
-1.Bước 1: Tiền xử lý dữ liệu
-	- Chạy CreateMetadata.py để tạo metadata từ dataset:
-		```
-		python CreateMetadata.py
-		```
-	- Chạy G2P.py để map từ word sang phoneme :  
-		```
-		python G2P.py
-		```  
-	- Chạy BuidVocab.py để tạo từ điển vocab :  
-		```
-		python BuildVocab.py
-		```  
-	- Chạy EncodeCanonAndTrans.py để encode canonical và transcript thành dãy số :  
-		```
-		python EncodeCanonAndTrans.py
-		```  
-2.Bước 2: Huấn luyện mô hình
-	- Chạy Trainer.py để thực hiện huấn luyện mô hinh :  
-		```
-		python Trainer.py
-		```  
-3.Bước 3: Đánh giá mô hình
-	- CHạy Evaluate sau khi đã hoàn tất huấn luyện để đánh giá mô hình :  
-		```
-		python Evaluate.py
-		```
+1. **Bước 1: Tiền xử lý dữ liệu**
+    * Chạy `CreateMetadata.py` để tạo metadata từ dataset:  
+      ```bash
+      python CreateMetadata.py
+      ```  
+    * Chạy `G2P.py` để map từ word sang phoneme:  
+      ```bash
+      python G2P.py
+      ```  
+    * Chạy `BuildVocab.py` để tạo từ điển vocab:  
+      ```bash
+      python BuildVocab.py
+      ```  
+    * Chạy `EncodeCanonAndTrans.py` để encode canonical và transcript thành dãy số:  
+      ```bash
+      python EncodeCanonAndTrans.py
+      ```  
+
+2. **Bước 2: Huấn luyện mô hình**
+    * Chạy `Trainer.py` để thực hiện huấn luyện mô hình:  
+      ```bash
+      python Trainer.py
+      ```  
+
+3. **Bước 3: Đánh giá mô hình**
+    * Chạy `Evaluate.py` sau khi đã hoàn tất huấn luyện để đánh giá mô hình:  
+      ```bash
+      python Evaluate.py
+      ```
