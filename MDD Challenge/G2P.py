@@ -23,7 +23,7 @@ def load_lexicon(lexicon_path):
 
 
 lexicon = load_lexicon(
-    "/kaggle/input/datasets/nguyenquangduy15/challenge-train/MDD-Challenge-2025-training-set/metadata/lexicon_vmd.txt")
+    "Path_to_lexicon_file")
 r_lex = {phone: word for word, phone in lexicon.items()}
 dictionary = {'w2p': lexicon,
               'p2w': r_lex}
@@ -31,7 +31,7 @@ with open("lexicon.pkl", "wb") as f:
     pickle.dump(dictionary, f)
 
 word = pd.read_csv(
-    "/kaggle/input/datasets/nguyenquangduy15/challenge-train/MDD-Challenge-2025-training-set/metadata/train.csv")
+    "Path_to_train.csv")
 root_dir = "/kaggle/input/datasets/nguyenquangduy15/challenge-train/MDD-Challenge-2025-training-set/"
 
 
