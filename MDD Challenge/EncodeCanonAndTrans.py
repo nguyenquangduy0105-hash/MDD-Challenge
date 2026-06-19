@@ -7,12 +7,12 @@ import torchaudio
 import pandas as pd
 
 
-with open ("/kaggle/working/mdd_dataset.pkl","rb") as f:
+with open ("mdd_dataset.pkl","rb") as f:
     df = pickle.load(f)
 
 with open("vocab.pkl","rb") as f:
     vocab = pickle.load(f)
-with open("/kaggle/working/lexicon.pkl",'rb') as f:
+with open("lexicon.pkl",'rb') as f:
     lexicon = pickle.load(f)
 
 
