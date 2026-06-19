@@ -19,7 +19,7 @@ gc.collect()
 torch.cuda.empty_cache()
 
 
-pkl_path = '/kaggle/working/Encoded.pkl'
+pkl_path = 'Path_to_encoded canonical and transcript'
 with open(pkl_path, 'rb') as f:
     samples = pickle.load(f)
 
@@ -34,7 +34,7 @@ class L2ArcticDataset(Dataset):
     def __init__(self, data_list, sampler_rate=16000):
         self.data_list = data_list
         self.sampler_rate = sampler_rate
-        self.dataset_root = "/kaggle/input/datasets/mapotofu41/en-mdd/EN_MDD/WAV"
+        self.dataset_root = "Path to wav files"
 
         from transformers import Wav2Vec2Processor
         self.processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
@@ -332,8 +332,7 @@ for epoch in range(100):
 
     if val_loss is not None and val_loss < best_loss:
         best_loss = val_loss
-        upload_best_model(model=model, epoch=epoch, val_loss=val_loss, username='nguyenquangduy15',
-                          dataset_name="papl-train-model")
+        torch.save(model.state_dict(),"model.pth")
         print(f"Đã lưu model tốt nhất tại epoch với loss: {best_loss:.4f}")
         counter = 0
     else:
