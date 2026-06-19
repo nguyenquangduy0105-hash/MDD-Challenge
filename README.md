@@ -25,17 +25,14 @@ cd <ten-thu-muc>
 pip install torch
 pip install torchaudio
 pip install numpy
-pip install pickle
 pip install transformers
 pip install pandas
-pip install json
-pip install os
-pip install re
 pip install librosa
 pip install pyarrow
 pip install dataset
 ```
 3. Chỉnh sửa các đường dẫn trong trong các file thành đường dẫn của bạn
+> 🔴 **QUAN TRỌNG:** Vì mã nguồn được đóng gói từ môi trường Kaggle Notebook, trước khi chạy, bạn **bắt buộc** phải mở các file `.py` ra và chỉnh sửa lại cấu hình đường dẫn dữ liệu (`DATA_PATH`, `MODEL_PATH`,...) cho phù hợp với cấu trúc thư mục local trên máy của bạn.
 ## Chạy mô hình
 
 Chạy pipeline theo các bước dưới đây để xử lý dữ liệu, huấn luyện và đánh giá mô hình:  
