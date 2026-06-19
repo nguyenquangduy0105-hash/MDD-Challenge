@@ -15,10 +15,8 @@ import gc
 gc.collect()
 torch.cuda.empty_cache()
 
-print(f"📍 Script đang chạy tại: {os.getcwd()}")
 
-
-pkl_path = '/kaggle/working/Encoded.pkl'
+pkl_path = 'Path_to_encoded_canonical_and_transcript'
 with open(pkl_path, 'rb') as f:
     samples = pickle.load(f)
 
@@ -34,7 +32,7 @@ class L2ArcticDataset(Dataset):
     def __init__(self, data_list, sampler_rate=16000):
         self.data_list = data_list
         self.sampler_rate = sampler_rate
-        self.dataset_root = "/kaggle/input/datasets/nguyenquangduy15/challenge-test/MDD-Challenge-2025-public-test (1)/MDD-Challenge-2025-public-test"
+        self.dataset_root = "Path_to_test"
 
         from transformers import Wav2Vec2Processor
         self.processor = Wav2Vec2Processor.from_pretrained("nguyenvulebinh/wav2vec2-base-vietnamese-250h")
